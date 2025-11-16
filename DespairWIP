@@ -1,0 +1,1223 @@
+if not game.PlaceId == '6403373529' or not game.PlaceId == '124596094333302' then return end
+if game['Players']['LocalPlayer'].leaderstats.Slaps.Value < 15 then
+game.GetService(game, 'StarterGui'):SetCore('SendNotification', {
+Icon = 'http://www.roblox.com/asset/?id=17702124114',
+Title = 'Despair',
+Text = 'You need Diamond (15 Slaps) to use Despair.',
+Duration = 10;
+}) return end
+if not game['Players']['LocalPlayer']['Character']['Humanoid']['Health'] == 100 then
+if type(replicatesignal) == 'function'
+then replicatesignal(game['Players']['LocalPlayer'].Kill) else
+game['Players']['LocalPlayer']['Character']['Humanoid'].Health = 0
+end end
+
+if not getgenv().alreadynotified then
+getgenv().alreadynotified = true
+game.GetService(game, 'StarterGui'):SetCore('SendNotification', {
+Icon = 'http://www.roblox.com/asset/?id=17702124114',
+Title = 'Despair',
+Text = 'User: '..game['Players']['LocalPlayer'].Name,
+Duration = 7;
+}) end
+
+--[[
+Cryptic i KNOW ur reading ts
+Just wanted u to know ur a skid!!
+Stop using code indentation btw it makes ur code look shittier
+]]--
+
+getgenv().NightMode = true
+
+--[[
+
+// Credits for some functions:
+Godcat: Models
+Kizzy: Despair and all related content
+]]
+
+--[[
+          _____                    _____                    _____                    _____                    _____                    _____                    _____          
+         /\    \                  /\    \                  /\    \                  /\    \                  /\    \                  /\    \                  /\    \         
+        /::\    \                /::\    \                /::\    \                /::\    \                /::\    \                /::\    \                /::\    \        
+       /::::\    \              /::::\    \              /::::\    \              /::::\    \              /::::\    \               \:::\    \              /::::\    \       
+      /::::::\    \            /::::::\    \            /::::::\    \            /::::::\    \            /::::::\    \               \:::\    \            /::::::\    \      
+     /:::/\:::\    \          /:::/\:::\    \          /:::/\:::\    \          /:::/\:::\    \          /:::/\:::\    \               \:::\    \          /:::/\:::\    \     
+    /:::/  \:::\    \        /:::/__\:::\    \        /:::/__\:::\    \        /:::/__\:::\    \        /:::/__\:::\    \               \:::\    \        /:::/__\:::\    \    
+   /:::/    \:::\    \      /::::\   \:::\    \       \:::\   \:::\    \      /::::\   \:::\    \      /::::\   \:::\    \              /::::\    \      /::::\   \:::\    \   
+  /:::/    / \:::\    \    /::::::\   \:::\    \    ___\:::\   \:::\    \    /::::::\   \:::\    \    /::::::\   \:::\    \    ____    /::::::\    \    /::::::\   \:::\    \  
+ /:::/    /   \:::\ ___\  /:::/\:::\   \:::\    \  /\   \:::\   \:::\    \  /:::/\:::\   \:::\____\  /:::/\:::\   \:::\    \  /\   \  /:::/\:::\    \  /:::/\:::\   \:::\____\ 
+/:::/____/     \:::|    |/:::/__\:::\   \:::\____\/::\   \:::\   \:::\____\/:::/  \:::\   \:::|    |/:::/  \:::\   \:::\____\/::\   \/:::/  \:::\____\/:::/  \:::\   \:::|    |
+\:::\    \     /:::|____|\:::\   \:::\   \::/    /\:::\   \:::\   \::/    /\::/    \:::\  /:::|____|\::/    \:::\  /:::/    /\:::\  /:::/    \::/    /\::/   |::::\  /:::|____|
+ \:::\    \   /:::/    /  \:::\   \:::\   \/____/  \:::\   \:::\   \/____/  \/_____/\:::\/:::/    /  \/____/ \:::\/:::/    /  \:::\/:::/    / \/____/  \/____|:::::\/:::/    / 
+  \:::\    \ /:::/    /    \:::\   \:::\    \       \:::\   \:::\    \               \::::::/    /            \::::::/    /    \::::::/    /                 |:::::::::/    /  
+   \:::\    /:::/    /      \:::\   \:::\____\       \:::\   \:::\____\               \::::/    /              \::::/    /      \::::/____/                  |::|\::::/    /   
+    \:::\  /:::/    /        \:::\   \::/    /        \:::\  /:::/    /                \::/____/               /:::/    /        \:::\    \                  |::| \::/____/    
+     \:::\/:::/    /          \:::\   \/____/          \:::\/:::/    /                  ~~                    /:::/    /          \:::\    \                 |::|  ~|          
+      \::::::/    /            \:::\    \               \::::::/    /                                        /:::/    /            \:::\    \                |::|   |          
+       \::::/    /              \:::\____\               \::::/    /                                        /:::/    /              \:::\____\               \::|   |          
+        \::/____/                \::/    /                \::/    /                                         \::/    /                \::/    /                \:|   |          
+         ~~                       \/____/                  \/____/                                           \/____/                  \/____/                  \|___|          
+                                                                                                                                                                               
+
+
+HELLO SKIDDIE, BELOW YOU CAN SEE MY SUPER HYPER
+MEGA ULTRA EXTREME EPIC INSANE OVERPOWERED
+ULTIMATE FANTASTIC CRAZY LEGENDARY GODLIKE HYPERION
+GALACTIC COSMIC MIND-BLOWING
+STUPENDOUS UNSTOPPABLE ABSOLUTE INVINCIBLE PHENOMENAL UBER
+MAXIMUM TITANIC COLOSSAL MONSTROUS EPIC LEVEL
+HYPERDRIVE SUPERCHARGED ULTRAMEGA
+FANTABULOUS SCRIPT OF DOOM CHAOTIC FURY
+APOCALYPTIC RADIANT GLORIOUS MAGNIFICENT ASTONISHING BRUTAL
+RAMPAGING UNIMAGINABLE TRANSCENDENT UNREAL MYTHICAL EPICNESS
+OVERLOAD SCRIPT MASTERPIECE SUPREME LEGENDARY HYPER-MEGA
+ULTRA-INFERNO EXTREME-O-MATIC CHAOS BLAST APOCALYPSIS
+OVERDRIVE FANTASTIC ULTRA EPIC INSANITY MODE
+MAXIMUM DESTRUCTION GALACTIC SUPERIORITY UNSTOPPABLE ULTIMATE
+AWESOME FORCE HYPERLEGENDARY MONSTROUS TITANIC
+ULTRA EPIC OVERLOAD SCRIPT OF TOTAL
+DOOM AND ABSOLUTE CHAOS SUPERFANTASTIC MEGAHYPER
+EPICULTIMATE INSANEOUS MIND-BLOWINGLEGENDARY COSMIC GODLIKE
+ULTRAFANTASTIC HYPER INSANE TITANIC OVERPOWERED CHAOTIC
+MEGA EXTREME EPIC SUPER ULTRA FANTABULOUS
+RADICAL COLOSSAL PHENOMENAL SUPREME LEGENDARY INSANITY
+UNSTOPPABLE EPICNESS MIND-BLOWING
+TITANIC MONSTROUS ULTIMATE CRAZY FANTASTIC OVERLOAD
+APOCALYPTIC HYPER INSANE
+ULTRA EPIC SUPER LEGENDARY COSMIC OVERPOWERED
+MEGA TITANIC FANTABULOUS EXTREME INSANE EPIC
+HYPER ULTRA CHAOTIC SUPREME MIND-BLOWING UNSTOPPABLE
+MONSTROUS MEGA ULTIMATE
+FANTASTIC CRAZY HYPER LEGENDARY EPIC OVERLOAD
+SCRIPT SUPER EXTREME
+ULTRA INSANE TITANIC FANTABULOUS MEGA HYPER
+COSMIC GODLIKE EPICNESS CHAOS BLAST MIND-BLOWING
+SUPER ULTIMATE OVERPOWERED PHENOMENAL CRAZY TITANIC
+LEGENDARY HYPER MEGA EPIC INSANE FANTABULOUS
+SUPREME ULTRA MONSTROUS EXTREME INSANEOUS EPIC
+HYPER ULTIMATE SUPER GALACTIC MIND-BLOWING LEGENDARY
+TITANIC COSMIC INSANE EPIC OVERLOAD SUPER
+ULTIMATE HYPER ULTRAFANTASTIC CHAOTIC EPIC MEGA
+LEGENDARY INSANE MONSTROUS TITANIC FANTABULOUS SUPREME
+HYPER ULTRA EPIC INSANE OVERPOWERED CRAZY
+MIND-BLOWING SUPER ULTIMATE TITANIC FANTABULOUS LEGENDARY
+HYPER MEGA EPIC INSANE ULTRA CHAOTIC
+MONSTROUS PHENOMENAL EXTREME SUPREME FANTASTIC EPICNESS
+HYPER ULTRAMEGA INSANE TITANIC OVERLOAD CRAZY
+MIND-BLOWING SUPREME EXTREME HYPER MEGA ULTRA
+EPIC LEGENDARY TITANIC MONSTROUS OVERPOWERED FANTABULOUS
+SUPER ULTRA INSANE CHAOTIC EPICNESS INSANE SUPER SCRIPT 
+AND FINALLY, GPT GENERATED SCRIPT.
+]]--
+
+--//===============================================================\\
+--||       Converted to SB by Kizzy     Edit By Godcat567     Template By Shackluster
+--\\===============================================================//
+
+--// Shortcut Variables \\--
+
+local S = setmetatable({}, {__index = function(_, name) return game:service(name) end})
+
+local VT = Vector3.new
+local RAD = math.rad
+local SIN = math.sin
+local CF = CFrame.new
+local ANGLES = CFrame.Angles
+local DE = S.Debris
+local WS = workspace
+local Lght = S.Lighting
+local RepS = S.ReplicatedStorage
+local INST = Instance.new
+local UIS = S.UserInputService
+
+--// Essentials \\--
+
+local Frame_Speed = 60
+
+local ArtificialHB = INST'BindableEvent'
+ArtificialHB.Name = "ArtificialHeartbeat"
+
+local tf = 0
+local allowframeloss = true
+local tossremainder = true
+local lastframe = tick()
+local frame = 1 / Frame_Speed
+ArtificialHB:Fire()
+
+game.GetService(game, 'RunService').Stepped:connect(function(s, p)
+tf = tf + s
+if tf >= frame then
+if allowframeloss then
+ArtificialHB:Fire()
+lastframe = tick() else
+for i = 1, math.floor(tf / frame) do
+ArtificialHB:Fire() end
+lastframe = tick() end
+if tossremainder then
+tf = 0 else
+tf = tf - frame * math.floor(tf / frame)
+end end end)
+
+function swait(amount: number?, mode: string?): boolean
+mode = mode or 'f'
+
+if mode == 'f'
+then if not amount or amount == 0 then
+ArtificialHB.Event:Wait() else
+for _ = 1, amount do
+ArtificialHB.Event:Wait()
+end end
+return true
+elseif mode == 's'
+then local t = tick() + amount
+repeat
+ArtificialHB.Event:Wait()
+until tick() >= t
+return true
+elseif mode == 'm'
+then local t = tick() + amount * 60
+repeat
+ArtificialHB.Event:Wait()
+until tick() >= t
+return true; else
+warn('Invalid method '..tostring(mode))
+return false
+end end
+
+--[[
+S: Second
+M: Minute
+F: Frame
+]]--
+
+--// ^ If ur stealing my services u must add this above everything retard😡
+
+-- // Special Checks \\--
+if getgenv().despairisloaded
+then print 'Hey fella, looks like the script was already ran in this lifetime. If you wish to run it again, please reset before trying again.'
+else
+getgenv().despairisloaded = true
+
+a = '123' -- // Ignore this, i made this so i can see what errors were shown AFTER the script was executed
+print(a)
+
+-->> BP'S
+
+local yourself = game['Players']['LocalPlayer']
+local paster = yourself['Character']
+local noid = paster['Humanoid']
+local head = paster['Head']
+local torso = paster['Torso']
+local humanoidrootpart = paster['HumanoidRootPart']
+local leftleg = paster['Left Leg']
+local rightleg = paster['Right Leg']
+
+-- // Services \\--
+local pastedndetected = game.CoreGui
+local hui = gethui()
+local UIS = S.UserInputService
+local http = S.HttpService
+local tweening = S.TweenService
+local runservice = S.RunService
+local soundsparent = S.Stats
+local textchatservice = S.TextChatService
+local Lght = S.Lighting
+
+-- // Extras & Required \\ --
+local VISUALIZERPARTSGGEZ = {}
+local TAIL = {}
+local AnimationTail_Speed = 3
+local csound
+local vizspeed = 1
+local targetvizspeed = 1
+local draggy = false
+local dragi
+local despairdespairdespair = INST('Folder', paster)
+despairdespairdespair.Name = http:GenerateGUID(false)
+local nomorefemboys = paster:FindFirstChild'Head'
+local nomoreskidding = paster:FindFirstChild'Torso'
+if not nomorefemboys or not nomoreskidding then return end
+if not getgenv().EffectStorage then
+local effectfolder = INST'Folder'
+effectfolder.Name = 'EFS'
+effectfolder.Parent = WS
+getgenv().EffectStorage = effectfolder end
+
+function Vaporwaveify(text)
+function wide(a)
+if a < '!' or a > '~' then return a end
+if a==' ' then return '  ' end 
+a = a:byte() + 160
+if a<256 then return string.char(239, 188, a-64) end
+return string.char(239, 189, a-128) end
+return(text:gsub('.',wide)) end
+
+function doanim(id, timepos, playfade, stopfade, stoptime)
+local atanim = INST'Animation'
+atanim.AnimationId = 'rbxassetid://'..id
+local at1 = noid:LoadAnimation(atanim)
+at1:Play(playfade or .1, 1, 1)
+at1.TimePosition = timepos or 0
+task.delay(stoptime, function()
+at1:Stop(stopfade or .1)
+end) end
+
+function chatfunc(text)
+local chat = coroutine.wrap(function()
+if paster:FindFirstChild'TalkingBillBoard' ~= nil then
+paster:FindFirstChild'TalkingBillBoard':Destroy()
+end
+
+local bill = INST('BillboardGui', paster)
+bill.Size = UDim2.new(.15, 0, .05, 0)
+bill.StudsOffsetWorldSpace = Vector3.new(0, 3, 0) 
+bill.Adornee = head
+bill.Name = 'TalkingBillBoard'
+bill.AlwaysOnTop = true
+
+local hehe = INST('TextLabel', bill)
+hehe.BackgroundTransparency = 1
+hehe.BorderSizePixel = 0
+hehe.Text = ''
+hehe.Font = 'Garamond'
+hehe.TextSize = 40
+hehe.TextStrokeTransparency = 0
+hehe.Size = UDim2.new(1, 0, 1, 0)
+
+coroutine.resume(coroutine.create(function()
+while hehe ~= nil and hehe.Parent ~= nil do
+task.wait()
+local v = math.random(1, 255)
+local col = Color3.fromRGB(v, v, v)
+hehe.TextColor3 = col
+hehe.TextStrokeColor3 = col
+end end))
+
+for i = 1, #text, 1 do
+task.wait()
+hehe.Text = string.sub(text,1,i) end
+
+task.wait(1.2)
+
+local sound = INST('Sound', soundsparent)
+sound.SoundId = 'rbxassetid://749189256'
+sound.Volume = 4
+sound.PlaybackSpeed = math.random(5, 15) / 10
+sound:Play()
+DE:AddItem(sound, 4)
+
+for i = 1, 100 do
+task.wait()
+hehe.Text = hehe.Text.. string.char(math.random(0,126))
+hehe.Rotation = hehe.Rotation - .8
+hehe.TextStrokeTransparency = hehe.TextStrokeTransparency + .01
+hehe.TextTransparency = hehe.TextTransparency + .01 end
+
+bill:Destroy() end)
+chat() end
+
+function onchatted(msg)
+chatfunc(msg) end
+
+local cdlist = {}
+local cdgui = game.CoreGui:FindFirstChild'CooldownSystem' or INST('ScreenGui', game.CoreGui)
+cdgui.Name = 'CooldownSystem'
+cdgui.IgnoreGuiInset = true
+cdgui.ResetOnSpawn = false
+
+local container = cdgui:FindFirstChild'CooldownContainer' or INST'Frame'
+container.Name = 'CooldownContainer'
+container.Size = UDim2.new(0, 90, 1, 0)
+container.Position = UDim2.new(0, 10, 0, 0)
+container.BackgroundTransparency = 1
+container.Parent = cdgui
+
+function updatecdpos()
+for e,sex in next, cdlist do
+local ygoal = .5 - ((e - 1) * .06)
+local goal = UDim2.new(0, 0, ygoal, 0)
+tweening:Create(sex, TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+Position = goal}):Play()
+end end
+
+function docooldown(name, time, tbl, key)
+if tbl and key then tbl[key] = false end
+
+local timer = tick()
+local ended = false
+
+local frame = INST'Frame'
+frame.Size = UDim2.new(0, 90, 0, 16)
+frame.Position = UDim2.new(0, -150, .5, 0)
+frame.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+frame.BorderSizePixel = 2
+frame.BorderColor3 = Color3.new(0, 0, 0)
+frame.ClipsDescendants = true
+frame.Parent = container
+
+local fill = INST'Frame'
+fill.Size = UDim2.new(1, 0, 1, 0)
+fill.Position = UDim2.new(0, 0, 0, 0)
+fill.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+fill.BorderSizePixel = 0
+fill.ZIndex = 1
+fill.Parent = frame
+
+local text = INST'TextLabel'
+text.Size = UDim2.new(1, -4, 1, -4)
+text.Position = UDim2.new(0, 2, 0, 2)
+text.BackgroundTransparency = 1
+text.Text = name
+text.TextScaled = true
+text.Font = Enum.Font.Arcade
+text.TextColor3 = Color3.new(0, 0, 0)
+text.ZIndex = 2
+text.Parent = frame
+
+table.insert(cdlist, 1, frame)
+updatecdpos()
+
+task.spawn(function()
+while not ended
+do local del = tick() - timer
+if del < time
+then fill.Size = UDim2.new(1 - (del / time), 0, 1, 0)
+else fill.Size = UDim2.new(0, 0, 1, 0)
+ended = true
+
+if tbl and key then tbl[key] = true end
+
+for i = #cdlist, 1, -1 do
+if cdlist[i] == frame then
+table.remove(cdlist, i)
+break end end
+
+local tw = tweening:Create(frame, TweenInfo.new(.25, Enum.EasingStyle.Quint), {
+Position = UDim2.new(0, -150, frame.Position.Y.Scale, 0)})
+tw:Play()
+tw.Completed:Wait()
+frame:Destroy()
+updatecdpos() end task.wait() end end) end
+
+function save(name, file)
+if not isfile(name) then
+writefile(name,game:HttpGet(file))
+end end
+
+function randomfact()
+local CrypticIsTheBiggestSkidKnownToManAndIDontKnowWhyThisIsTheLongestVariableInThisScript
+= {
+'we all love despair',
+'despair is peak perfection, nothing comes close',
+'despair is forever the best custom glove ever made!!',
+'donjosex skids at any opportunity',
+'herkle hub is pasted yet impressive',
+'despair is flawless in every single way.',
+'you have never seen anything like despair',
+'pedrozin is a retard',
+'herkle hub is pasted',
+'cryptic is a skid',
+'herkle is a cool dude'
+}
+
+local randommsgthing = math.random(1, #CrypticIsTheBiggestSkidKnownToManAndIDontKnowWhyThisIsTheLongestVariableInThisScript)
+print('Random fact: ' .. CrypticIsTheBiggestSkidKnownToManAndIDontKnowWhyThisIsTheLongestVariableInThisScript[randommsgthing]) end
+
+function visualize()
+if getgenv().visualizerexists then return end
+getgenv().visualizerexists = true
+if not csound then return end
+
+local parts = {}
+local VisualizerNNN = INST('Model', WS)
+VisualizerNNN.Name = 'Visualizer'
+
+for i = 1, 48 do
+local part = INST'Part'
+part.Size = Vector3.new(.3, 2, .3)
+part.Anchored = true
+part.Material = Enum.Material.Neon
+part.Color = Color3.fromRGB(245, 245, 245)
+part.CanCollide = false
+part.Parent = VisualizerNNN
+parts[i] = part end
+
+local smooth, lasty = {}, {}
+for i = 1, 48 do
+smooth[i] = 2
+lasty[i] = 5 end
+
+local maxheight = humanoidrootpart.Position.Y - 3.3
+
+spawn(function()
+local t = 0
+while csound and csound.Parent do
+local dt = task.wait()
+t += dt * vizspeed
+
+local loud = (csound.PlaybackLoudness / 1000) * 20
+
+for e, bar in next, parts do
+local active = math.random() > .5
+local target = active and math.clamp(loud, .5, 15) or 0.5
+smooth[e] += (target - smooth[e]) * .25
+
+local angle = (e / 48) * math.pi * 2 + t * .2
+local xpos = humanoidrootpart.Position.X + math.cos(angle) * 10
+local zpos = humanoidrootpart.Position.Z + math.sin(angle) * 10
+
+bar.Size = Vector3.new(.3, smooth[e], .3)
+bar.CFrame = CFrame.new(xpos, maxheight + smooth[e] / 2, zpos) end
+
+if not csound.IsPlaying and not draggy
+then break
+end end
+print 'hi'
+end) end
+
+spawn(function()
+runservice.PostSimulation:Connect(function()
+vizspeed += (targetvizspeed - vizspeed) * .12
+end) end)
+
+task.delay(3, function()
+
+local musiclabel = INST'ScreenGui'
+musiclabel.IgnoreGuiInset = true
+musiclabel.Parent = pastedndetected
+
+local bar = INST'Frame'
+bar.Size = UDim2.new(0, 300, 0, 6)
+bar.Position = UDim2.new(.5, 0, .95, 0)
+bar.AnchorPoint = Vector2.new(.5, .5)
+bar.BackgroundColor3 = Color3.fromHex'#101014'
+bar.BorderSizePixel = 1
+bar.BorderColor3 = Color3.new(0, 0, 0)
+bar.Parent = musiclabel
+
+local fillbar = INST'Frame'
+fillbar.Size = UDim2.new(0, 0, 1, 0)
+fillbar.Position = UDim2.new(0, 0, 0, 0)
+fillbar.BackgroundColor3 = Color3.new(1, 1, 1)
+fillbar.BorderSizePixel = 0
+fillbar.BackgroundTransparency = 0
+fillbar.Parent = bar
+
+local title = INST'TextLabel'
+title.Size = UDim2.new(1, 0, 0, 14)
+title.Position = UDim2.new(0, 0, 0, -18)
+title.BackgroundTransparency = 1
+title.TextColor3 = Color3.new(1, 1, 1)
+title.Font = Enum.Font.Arcade
+title.TextSize = 14
+title.Text = ''
+title.TextTransparency = 1
+title.Parent = bar
+
+local indicator = INST'Frame'
+indicator.Size = UDim2.new(0, 10, 0, 10)
+indicator.AnchorPoint = Vector2.new(.5, .5)
+indicator.Position = UDim2.new(0, 0, .5, 0)
+indicator.BackgroundColor3 = Color3.new(1, 1, 1)
+indicator.Rotation = 45
+indicator.BorderSizePixel = 0
+indicator.BackgroundTransparency = 0
+indicator.Parent = bar
+
+local stroke = INST'UIStroke'
+stroke.Thickness = 1
+stroke.Color = Color3.new(0, 0, 0)
+stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+stroke.Parent = indicator
+
+function findsound(path)
+return xpcall(function()
+getcustomasset(path)
+return true end, function()
+return false
+end) end
+
+function plays(name, volume, musicname)
+if csound then
+csound:Stop()
+csound:Destroy() end
+
+local v = INST'Sound'
+v.Name = 'JP'
+v.Looped = false
+v.SoundId = getcustomasset(name)
+v.Volume = volume or 1
+v.Parent = soundsparent.Sound['# Sounds']
+v:Play()
+
+csound = v
+title.Text = musicname
+local tracker = musicname
+fillbar.Size = UDim2.new(0, 0, 1, 0)
+indicator.Position = UDim2.new(0, 0, .5, 0)
+bar.Visible = true
+bar.BackgroundTransparency = 0
+fillbar.BackgroundTransparency = 0
+title.TextTransparency = 0
+indicator.BackgroundTransparency = 0
+stroke.Transparency = 0
+visualize()
+
+if not getgenv().cambassvisualizer
+then getgenv().cambassvisualizer = true
+local sensitivity = .8
+local smoothness = .20
+
+runservice.PostSimulation:Connect(function()
+if csound and csound.IsPlaying and getgenv().cambassvisualizer == true then
+local loudness = csound.PlaybackLoudness or 0
+local targetFOV = 70 + (loudness / (15 / sensitivity))
+WS['CurrentCamera'].FieldOfView = WS['CurrentCamera'].FieldOfView + (targetFOV - WS['CurrentCamera'].FieldOfView) * smoothness
+end end) end
+
+tweening:Create(fillbar, TweenInfo.new(v.TimeLength, Enum.EasingStyle.Linear), {Size = UDim2.new(1, 0, 1, 0)}):Play()
+tweening:Create(indicator, TweenInfo.new(v.TimeLength, Enum.EasingStyle.Linear), {Position = UDim2.new(1, 0, .5, 0)}):Play()
+
+v.Ended:Connect(function()
+if tracker == 'Drop The Game - Maxx Baer'
+then plays('Despair/On The 8Bit Vibe.mp3', 5, 'On The 8Bit Vibe')
+elseif tracker == 'On The 8Bit Vibe'
+then plays('Despair/私のドリトスを失うことはありませんか、私はあなたの赤ちゃんを失うことになります Vaporwave By vιrтυal dyѕтopιa.mp3', 4, '私のドリトスを失うことはありませんか、私はあなたの赤ちゃんを失うことになります')
+elseif tracker == '私のドリトスを失うことはありませんか、私はあなたの赤ちゃんを失うことになります'
+then plays('Despair/Attacking Vertical.mp3', 3, 'Attacking Vertical') 
+elseif tracker == 'Attacking Vertical'
+then plays('Despair/Life Letters.mp3', 4, 'Life Letters')
+elseif tracker == 'Life Letters'
+then plays("Despair/Nero's First Day At Disneyland.mp3", 5, "Nero's First Day At Disneyland") 
+elseif tracker == "Nero's First Day At Disneyland"
+then plays('Despair/On the 8Bit Vibe.mp3', 6, 'On The 8Bit Vibe')
+end end) end
+
+function updatebar(posX)
+local barpos = bar.AbsolutePosition.X
+local barsize = bar.AbsoluteSize.X
+local relative = math.clamp(posX - barpos, 0, barsize)
+local ntime = (relative / barsize) * csound.TimeLength
+csound.TimePosition = ntime
+fillbar.Size = UDim2.new(relative / barsize, 0, 1, 0)
+indicator.Position = UDim2.new(relative / barsize, 0, .5, 0) end
+
+function dragb(input)
+if not csound then return end
+draggy = true
+dragi = input
+csound:Pause() 
+targetvizspeed = 0 end
+
+indicator.InputBegan:Connect(dragb)
+UIS.InputEnded:Connect(function(input)
+if draggy and dragi and input == dragi then
+draggy = false
+dragi = nil
+if csound then csound:Resume() end
+targetvizspeed = 1 end end)
+
+runservice.PreRender:Connect(function()
+if draggy and dragi then local posX
+if dragi.UserInputType == Enum.UserInputType.MouseMovement then
+posX = UIS:GetMouseLocation().X
+elseif dragi.UserInputType == Enum.UserInputType.Touch then
+posX = dragi.Position.X
+end
+if posX then updatebar(posX) end
+elseif csound and not draggy then
+local progress = csound.TimePosition / csound.TimeLength
+fillbar.Size = UDim2.new(progress, 0, 1, 0)
+indicator.Position = UDim2.new(progress, 0, .5, 0)
+end end) end)
+
+function CreatePartb(formFactor, parent, material, reflectance, transparency, color, name, size, anchored)
+local v = INST'Part'
+v.FormFactor = formFactor
+v.Size = size
+v.BrickColor = BrickColor.new(color)
+v.Material = material
+v.Reflectance = reflectance
+v.Transparency = transparency
+v.Anchored = anchored or false
+v.CanCollide = false
+v.Locked = true
+v.Name = name
+v.Parent = parent return v end
+
+function CreateWeldOrSnapOrMotor(type, part0, part1, part2, c0, c1)
+local v = INST(type)
+v.Part0 = part0
+v.Part1 = part2 or part1
+v.C0 = c0 or CFrame.new()
+v.C1 = c1 or CFrame.new()
+v.Parent = part0 return v end
+
+-- // Dependencies > removing this will result in the soundtracks & models not loading < \\--
+
+if not isfolder'Despair' then
+makefolder'Despair' end
+
+save('Despair/On The 8Bit Vibe.mp3', 'https://github.com/kizzylmfao/mp3-ggez/raw/refs/heads/main/9048378262.mp3')
+save('Despair/Drop The Game.mp3', 'https://github.com/kizzylmfao/mp3-ggez/raw/refs/heads/main/Flume%20&%20Chet%20Faker%20-%20Drop%20The%20Game%20(Maxx%20Baer%20Re-think).mp3')
+save("Despair/Nero's First Day At Disneyland.mp3", "https://github.com/kizzylmfao/mp3-ggez/raw/refs/heads/main/Nero's%20Day%20at%20Disneyland%20-%20Human%20Artifacts%20Found%20Underwater,%20Best%20Dressed%20Lists.mp3")
+save('Despair/Life Letters.mp3', 'https://github.com/kizzylmfao/mp3-ggez/raw/refs/heads/main/Life%20Letters%20(1).mp3')
+save('Despair/Attacking Vertical.mp3', 'https://github.com/kizzylmfao/mp3-ggez/raw/refs/heads/main/Femtanyl%20%20-%20ATTACKING%20VERTICAL%20lyric%20video.mp3')
+save('Despair/私のドリトスを失うことはありませんか、私はあなたの赤ちゃんを失うことになります Vaporwave By vιrтυal dyѕтopιa.mp3', 'https://github.com/kizzylmfao/mp3-ggez/raw/refs/heads/main/%E7%A7%81%E3%81%AE%E3%83%89%E3%83%AA%E3%83%88%E3%82%B9%E3%82%92%E5%A4%B1%E3%81%86%E3%81%93%E3%81%A8%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%9B%E3%82%93%E3%81%8B%E3%80%81%E7%A7%81%E3%81%AF%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%E8%B5%A4%E3%81%A1%E3%82%83%E3%82%93%E3%82%92%E5%A4%B1%E3%81%86%E3%81%93%E3%81%A8%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%99%20Vaporwave%20%20By%20v%CE%B9r%D1%82%CF%85al%20dy%D1%95%D1%82op%CE%B9a.mp3')
+save('Despair/star.txt.rbxmx', 'https://github.com/kizzylmfao/files/raw/refs/heads/main/star.txt.rbxmx')
+save('Despair/spikecrown.txt.rbxmx', 'https://github.com/kizzylmfao/files/raw/refs/heads/main/spikecrown.txt.rbxmx')
+save('Despair/Light.mp3', 'https://github.com/kizzylmfao/mp3-ggez/raw/refs/heads/main/lv_0_20250921172246-slowedandreverbstudio.wav')
+--==--
+local pp
+local mod1 = game:GetObjects(getcustomasset'star.txt.rbxmx')
+local mod2 = mod1[1]
+local mod3 = game:GetObjects'rbxassetid://10383669937'[1]
+
+-- // Starting this entire shitty script \\ --
+
+print(Vaporwaveify'--- execution allowed ---')
+task.defer(function()
+warn(Vaporwaveify'--- Despair is entirely open source. Feel free to skid my modules! ---')
+end) 
+
+yourself.Chatted:Connect(onchatted)
+
+
+runservice.PostSimulation:Connect(function()
+local wall = WS:FindFirstChild'wall'
+if wall
+then wall.CanCollide = false end
+end)
+
+textchatservice.BubbleChatConfiguration.Enabled = false
+WS[game.Players.LocalPlayer.Name].isInArena.Value = true
+_G.WalkJump = false
+spawn(function()
+game.Players.LocalPlayer.Character:PivotTo(CFrame.new(3, -4, 187))
+local gui=INST('ScreenGui',yourself:WaitForChild('PlayerGui')) gui.IgnoreGuiInset=true gui.ResetOnSpawn=false local label=INST('TextLabel',gui) label.Size=UDim2.new(1,0,1,0) label.AnchorPoint=Vector2.new(.5,.5) label.Position=UDim2.new(.5,0,.5,0) label.Text='DESPAIR' label.Font=Enum.Font.Arcade label.TextScaled=true label.TextColor3=Color3.new(1,1,1) label.BackgroundTransparency=1 label.TextStrokeTransparency=0 label.TextStrokeColor3=Color3.new(0,0,0) local tremor=true spawn(function() while tremor do label.Position=UDim2.new(.5,math.random(-10,10),.5,math.random(-10,10)) label.Rotation=math.random(-3,3) task.wait(.02) end end) local originalClock=Lght.ClockTime Lght.ClockTime=0 spawn(function() while tremor do local frame=INST('Frame',gui) frame.Size=UDim2.new(math.random(5,30)/100,0,math.random(5,30)/100,0) frame.Position=UDim2.new(math.random(),0,math.random(),0) frame.BackgroundColor3=(math.random(1,2)==1) and Color3.new(1,1,1) or Color3.new(0,0,0) frame.BorderSizePixel=0 task.delay(.05,function() frame:Remove() end) task.wait(.005) end end) spawn(function() while tremor do task.wait(.03) end end) task.delay(2.5,function() tremor=false for i=1,20 do label.TextTransparency=i/20 label.TextStrokeTransparency=i/20 task.wait(.03) end Lght.ClockTime=originalClock gui:Remove() end)
+local k = INST'Animation'
+spawn(function()
+noid.WalkSpeed = 0
+noid.JumpPower = 0
+task.delay(5, function()
+_G.WalkJump = true
+while task.wait() do
+if _G.WalkJump == true then
+noid.WalkSpeed = 23
+noid.JumpPower = 35
+else return end end end) end)
+k.AnimationId = 'rbxassetid://15252161630'
+local v = noid:LoadAnimation(k)
+v:Play()
+spawn(function()
+local se2 = INST'Sound'
+se2.SoundId = getcustomasset'Light.mp3'
+se2.Volume = 2.5
+se2.Parent = game.CoreGui
+se2:Play()
+task.delay(7, function() se2:Remove() end)
+end)
+task.delay(3, function() v:Stop() end) end)
+
+--++--
+task.delay(2.7, function()
+local se = INST'Sound'
+se.SoundId = 'rbxassetid://100261872009811'
+se.Volume = 6
+se.Parent = game.CoreGui
+se:Play()
+task.delay(7, function() se:Remove() end)
+
+--++--
+
+local sge = INST'ScreenGui'
+sge.IgnoreGuiInset = true
+sge.Parent = game.CoreGui
+local sg = INST'Frame'
+sg.Size = UDim2.new(1,0,1,0)
+sg.BackgroundColor3 = Color3.new(0,0,0)
+sg.Parent = sge
+task.delay(1, function()
+local tw = game.TweenService:Create(sg, TweenInfo.new(2.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Transparency=1})
+tw:Play()
+tw.Completed:Connect(function()
+sge:Remove()
+end) end) end)
+
+--++--
+task.delay(3, function()
+plays('Despair/Drop The Game.mp3', 6, 'Drop The Game - Maxx Baer') end)
+
+--++--
+mod2.Parent = WS
+
+--++--
+for f, ag in next, mod2:GetDescendants() do
+if ag:IsA'BasePart' then pp = ag
+break end end
+
+--++--
+
+local w = INST'Motor6D'
+w.Part0 = torso
+w.Part1 = pp
+w.C0 = CFrame.new(0,.5,0) * CFrame.Angles(0, math.rad(90), 0)
+w.C1 = CFrame.new()
+w.Parent = torso
+
+-- // Modding models \\ --
+ 
+for f, ag in next, WS:GetDescendants() do
+if ag.Name == 'Star' and ag:IsA'BasePart' then
+ag.Color = Color3.new(1, 1, 1)
+end end
+
+mod3.Parent = WS
+mod3:PivotTo(CFrame.new(3, -8.3, 188) * CFrame.Angles(math.rad(90), 0, 0))
+for f,ag in next, mod3:GetDescendants() do
+if ag:IsA'BasePart' then
+ag.Color = Color3.fromRGB(255, 255, 255)
+ag.Material = Enum.Material.Neon
+ag.Size = ag.Size * 3
+elseif ag:IsA'Light' or ag:IsA'SurfaceLight' or ag:IsA'PointLight' or ag:IsA'SpotLight' then
+ag:Remove()
+end end
+
+task.delay(4, function()
+if getgenv().NightMode == true
+then for herkleisafaggot = tonumber(Lght.TimeOfDay:sub(1, 2)), 0, -1 do
+task.wait(.1)
+Lght.TimeOfDay = string.format('%02d:00:00', herkleisafaggot) end end
+Lght.Ambient = Color3.fromRGB(80, 80, 80)
+Lght.OutdoorAmbient = Color3.fromRGB(60, 60, 60)
+Lght.Brightness = 1.2
+Lght.FogColor = Color3.fromRGB(50, 50, 50); Lght.FogStart = 100; Lght.FogEnd = 600
+INST('Atmosphere', Lght).Density = .3
+Lght.Atmosphere.Offset = .25
+Lght.Atmosphere.Color = Color3.fromRGB(180, 180, 180)
+Lght.Atmosphere.Decay = Color3.fromRGB(80, 80, 80)
+Lght.Atmosphere.Glare = 0
+Lght.Atmosphere.Haze = 1
+local lightify = INST'PointLight'
+lightify.Color = Color3.fromRGB(255, 255, 255)
+lightify.Brightness = 2.5
+lightify.Range = 5
+lightify.Parent = humanoidrootpart end)
+
+spawn(function()
+yourself.Character.Head.Nametag.Labels.TopLabel.Visible = false
+yourself.Character.Head.Nametag.deviceImage.Visible = false
+
+-- Background
+for f, ag in next, WS.Backgroundmusic:GetChildren() do
+if ag:IsA'Sound'
+then game.TweenService:Create(ag,TweenInfo.new(1),{Volume=0}):Play()
+end end
+
+-- Plate
+game.TweenService:Create(WS.Arena.Plate.Sound,TweenInfo.new(1),{Volume=0}):Play()
+
+-- // Stop on death \\ --
+
+-- Background
+noid.Died:Connect(function()
+
+for v, k in next, pastedndetected:GetChildren()
+do if k.Name == 'musiclabel'
+then k:Remove() end end
+
+for v, k in next, WS:FindFirstChild'Visualizer':GetChildren()
+do k:Destroy() end
+
+getgenv().cambassvisualizer = false -- // disables cambass visualizer & makes it able to be ran again
+getgenv().visualizerexists = false -- // enables the script to create new vis parts
+getgenv().despairisloaded = false --// enables executing again
+for f, ag in next, WS.Backgroundmusic:GetChildren() do if ag:IsA'Sound' then game.TweenService:Create(ag,TweenInfo.new(1.5),{Volume=.25}):Play()
+end end
+
+-- Plate
+game.TweenService:Create(WS.Arena.Plate.Sound,TweenInfo.new(1.5),{Volume=1}):Play()
+
+-- Despair theme
+game.TweenService:Create(soundsparent.Sound['# Sounds']:FindFirstChild'JP', TweenInfo.new(2), {Volume = 0}):Play()
+task.delay(1.50, function()
+soundsparent.Sound['# Sounds']:FindFirstChild'JP':Remove()
+end) end) end)
+
+-- // Animator \\ --
+
+do
+--[[
+Hello there skiddie, seems like you want my
+super hyper mega advanced custom idle method.
+Thats okay for me, take it
+]]--
+local Anim = INST'Animation' Anim.AnimationId = 'rbxassetid://13544664658'
+local k = noid:LoadAnimation(Anim) k.Priority = Enum.AnimationPriority.Idle k:AdjustSpeed(.1)
+local despairloop = false
+function altidle()
+for f,ag in next, noid:GetPlayingAnimationTracks() do
+if ag.Animation.AnimationId == 'rbxassetid://180435571'
+then ag:Stop(.2) end end
+
+
+paster.Animate.walk.WalkAnim.AnimationId = 'rbxassetid://89800806135913'
+k:Play(.3)
+despairloop = true
+spawn(function()
+for RapeFaggots = 1,9999999999999999999 do 
+if despairloop == false then break end
+k.TimePosition = 1.1 + math.cos(RapeFaggots/35)/15
+task.wait() end end)
+end
+spawn(function()
+while task.wait() do
+local st = noid:GetState()
+local og = st == Enum.HumanoidStateType.Running  or st == Enum.HumanoidStateType.RunningNoPhysics or st == Enum.HumanoidStateType.Landed or st == Enum.HumanoidStateType.Climbing or st == Enum.HumanoidStateType.Seated
+if noid.MoveDirection.Magnitude == 0 and og then
+if not k.IsPlaying then altidle()
+end else
+if k.IsPlaying then
+despairloop = false
+k:Stop(.2) end end end end)
+spawn(function()
+local Anim = INST'Animation'
+Anim.AnimationId = 'rbxassetid://137495493673936'
+local k = noid:LoadAnimation(Anim)
+k.Priority = Enum.AnimationPriority.Idle
+k:AdjustSpeed(1)
+noid.StateChanged:Connect(function(f, ag)
+if ag == Enum.HumanoidStateType.Freefall 
+or ag == Enum.HumanoidStateType.FallingDown 
+or ag == Enum.HumanoidStateType.Jumping then
+if not k.IsPlaying then
+k:Play(.1) end
+else
+if k.IsPlaying then
+k:Stop(.2)
+end end end) end) end
+
+-- // Models Creation \\ --
+
+local k = game:GetObjects(getcustomasset'Despair/spikecrown.txt.rbxmx')[1]
+k.Parent = workspace
+
+if k:IsA'BasePart' then
+k.Color = Color3.fromRGB(255,255,255)
+k.CanCollide = false
+local mesh = k:FindFirstChildWhichIsA'SpecialMesh'
+if mesh
+then mesh.Scale = Vector3.new(.8, .8, .8) end
+coroutine.wrap(function()
+local angle = 0
+local offset = Vector3.new(0, 0, 0)
+while k.Parent do
+angle = angle + math.rad(2)
+k.CFrame = head.CFrame * CFrame.new(offset) * CFrame.Angles(math.rad(90),0,angle)
+task.wait()
+end end)() end
+
+--[[
+Tuff horns & tail
+Original by Godcat 
+^ Godcat: https://youtube.com/@david_the_extreme_gamer?si=nWudFx25PeXR9nDM
+]]
+
+task.delay(3.35, function()
+local LASTPART, LASTPART2, LASTPART3 = nomorefemboys, nomorefemboys, nomorefemboys
+task.wait(.05)
+for i = 1, 46 do
+local scale = 1 - (i / 25)
+local Horn2 = CreatePartb(3, despairdespairdespair, Enum.Material.Neon, 0, 0, 'Lily white', 'Horn2', VT(.25*scale,.25,.25*scale))
+local weldCF = (LASTPART2 == nomorefemboys) and CF(.3,.7,-.35)*ANGLES(RAD(-55), RAD(15), RAD(-15)) or CF(0,Horn2.Size.Y/1.8,0)*ANGLES(RAD(6), RAD(-.3),0)
+CreateWeldOrSnapOrMotor('Weld', LASTPART2, Horn2, nil, weldCF)
+LASTPART2 = Horn2 end
+;
+LASTPART2 = nomorefemboys
+for i = 1, 46 do
+local scale = 1 - (i / 25)
+local Horn2 = CreatePartb(3, despairdespairdespair, Enum.Material.Neon, 0, 0, 'Lily white', 'Horn2', VT(.25*scale,.25,.25*scale))
+local weldCF = (LASTPART2 == nomorefemboys) and CF(-.3,.7,-.35)*ANGLES(RAD(-55), RAD(-15), RAD(15)) or CF(0,Horn2.Size.Y/1.8,0)*ANGLES(RAD(6), RAD(.3),0)
+CreateWeldOrSnapOrMotor('Weld', LASTPART2, Horn2, nil, weldCF)
+LASTPART2 = Horn2 end
+;
+LASTPART = nomorefemboys
+for i = 1, 72 do
+local scale = 1 - (i / 25)
+local Horn = CreatePartb(3, despairdespairdespair, Enum.Material.Neon, 0, 0, 'Lily white', 'Horn', VT(.25*scale,.25,.25*scale))
+local weldCF = (LASTPART == nomorefemboys) and CF(.3,.7,-.35)*ANGLES(RAD(-55), RAD(15), RAD(-15)) or CF(0,Horn.Size.Y/1.8,0)*ANGLES(RAD(6), RAD(-2.5),0)
+CreateWeldOrSnapOrMotor('Weld', LASTPART, Horn, nil, weldCF)
+LASTPART = Horn end
+;
+LASTPART = nomorefemboys
+for i = 1, 72 do
+local scale = 1 - (i / 25)
+local Horn = CreatePartb(3, despairdespairdespair, Enum.Material.Neon, 0, 0, 'Lily white', 'Horn', VT(.25*scale,.25,.25*scale))
+local weldCF = (LASTPART == nomorefemboys) and CF(-.3,.7,-.35)*ANGLES(RAD(-55), RAD(-15), RAD(15)) or CF(0,Horn.Size.Y/1.8,0)*ANGLES(RAD(6), RAD(2.5),0)
+CreateWeldOrSnapOrMotor('Weld', LASTPART, Horn, nil, weldCF)
+LASTPART = Horn end
+;
+LASTPART3 = nomorefemboys
+for i = 1, 74 do
+local scale = 1 - (i / 40)
+local Eye = CreatePartb(3, despairdespairdespair, Enum.Material.Neon, 0, 0, 'Lily white', 'Eye', VT(.15*scale,.15,.15*scale))
+local weldCF = (LASTPART3 == nomorefemboys) and CF(.3,.7,-.35)*ANGLES(RAD(-55), RAD(15), RAD(-15)) or CF(0,Eye.Size.Y/1.8,0)*ANGLES(RAD(6), RAD(2.5),0)
+CreateWeldOrSnapOrMotor('Weld', LASTPART3, Eye, nil, weldCF)
+LASTPART3 = Eye end
+;
+LASTPART3 = nomorefemboys
+for i = 1, 74 do
+local scale = 1 - (i / 40)
+local Eye = CreatePartb(3, despairdespairdespair, Enum.Material.Neon, 0, 0, 'Lily white', 'Eye', VT(.15*scale,.15,.15*scale))
+local weldCF = (LASTPART3 == nomorefemboys) and CF(-.3,.7,-.35)*ANGLES(RAD(-55), RAD(-15), RAD(15)) or CF(0,Eye.Size.Y/1.8,0)*ANGLES(RAD(6), RAD(-2.5),0)
+CreateWeldOrSnapOrMotor('Weld', LASTPART3, Eye, nil, weldCF)
+LASTPART3 = Eye end
+;
+LASTPART = torso
+for i = 1, 75 do
+local scale = 1 - i / 60
+local Tail = CreatePartb(3, despairdespairdespair, Enum.Material.Neon, 0, 0, 'Lily white', 'Tail', VT(.25*scale,.25,.25*scale))
+local weldCF = (LASTPART == torso) and CF(0,-.75,.5)*ANGLES(RAD(90),0,0) or CF(0,Tail.Size.Y/2,0)*ANGLES(RAD(-1.2),0,0)
+local WLD = CreateWeldOrSnapOrMotor('Weld', LASTPART, LASTPART, Tail, weldCF)
+LASTPART = Tail
+table.insert(TAIL, WLD)
+end end)
+
+local sine = 0
+runservice.PostSimulation:Connect(function(delta)
+sine = sine + delta * 60
+for _, v in next, TAIL do
+if v then
+local targetC1 = CFrame.Angles(0, 0, math.rad(3.5 * math.sin(sine / 20)))
+v.C1 = v.C1:Lerp(targetC1, 2 / AnimationTail_Speed)
+end end end)
+
+spawn(function()
+while task.wait(10) do
+randomfact()
+end end) end
+
+--//=================================\\
+--||	10 reasons why Despair is better than any other custom glove: 1. Optimized loops, 2. Good coding structure, 3. Non-skidded, 4. Open sourced, 5. uses selfmade anims that were made using ingame anims, 6. Unique functions that no other script has, 7. Unbreakable, almost ZERO glitches unlike certain custom gloves, 8. Was actually made with effort unlike some others, 9. The owner is a chill person ykyk, 10. I let yall skid cause i love yall my skiddies <3, 11. Its just better!!! -- extra
+--\\=================================//
+
+local G2L = {};
+
+G2L["D3sp4ir_1"] = INST("ScreenGui", game:service("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["D3sp4ir_1"]["Name"] = [[D3sp4ir]];
+G2L["D3sp4ir_1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+G2L["_2"] = INST("Folder", G2L["D3sp4ir_1"]);
+G2L["_2"]["Name"] = [[]];
+
+G2L["Right_3"] = INST("Folder", G2L["D3sp4ir_1"]);
+G2L["Right_3"]["Name"] = [[Right]];
+
+task.delay(5, function()
+G2L["VAbility_4"] = INST("ImageLabel", G2L["Right_3"]);
+G2L["VAbility_4"]["BorderSizePixel"] = 0;
+G2L["VAbility_4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+-- G2L["VAbility_4"]["ImageContent"] = ;
+G2L["VAbility_4"]["ImageColor3"] = Color3.fromRGB(29, 29, 29);
+G2L["VAbility_4"]["Image"] = [[rbxassetid://2312119891]];
+G2L["VAbility_4"]["Size"] = UDim2.new(0, 92, 0, 88);
+G2L["VAbility_4"]["BackgroundTransparency"] = 1;
+G2L["VAbility_4"]["Name"] = [[VAbility]];
+G2L["VAbility_4"]["Position"] = UDim2.new(0, 672, 0, 32);
+
+
+G2L["do1_5"] = INST("ImageLabel", G2L["VAbility_4"]);
+G2L["do1_5"]["BorderSizePixel"] = 0;
+G2L["do1_5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+-- G2L["do1_5"]["ImageContent"] = ;
+G2L["do1_5"]["ImageColor3"] = Color3.fromRGB(88, 88, 88);
+G2L["do1_5"]["Image"] = [[rbxassetid://2325939897]];
+G2L["do1_5"]["Size"] = UDim2.new(0, 160, 0, 122);
+G2L["do1_5"]["BackgroundTransparency"] = 1;
+G2L["do1_5"]["Name"] = [[do1]];
+G2L["do1_5"]["Position"] = UDim2.new(-0.36957, 0, -0.20455, 0);
+
+
+G2L["do2_6"] = INST("ImageLabel", G2L["do1_5"]);
+G2L["do2_6"]["BorderSizePixel"] = 0;
+G2L["do2_6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+-- G2L["do2_6"]["ImageContent"] = ;
+G2L["do2_6"]["Image"] = [[rbxassetid://2273224484]];
+G2L["do2_6"]["Size"] = UDim2.new(0, 140, 0, 130);
+G2L["do2_6"]["BackgroundTransparency"] = 1;
+G2L["do2_6"]["Name"] = [[do2]];
+G2L["do2_6"]["Position"] = UDim2.new(0.0625, 0, -0.01639, 0);
+
+
+G2L["do3_7"] = INST("ImageLabel", G2L["do2_6"]);
+G2L["do3_7"]["BorderSizePixel"] = 0;
+G2L["do3_7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+-- G2L["do3_7"]["ImageContent"] = ;
+G2L["do3_7"]["Image"] = [[rbxassetid://2092248396]];
+G2L["do3_7"]["Size"] = UDim2.new(0, 144, 0, 142);
+G2L["do3_7"]["BackgroundTransparency"] = 1;
+G2L["do3_7"]["Name"] = [[do3]];
+G2L["do3_7"]["Position"] = UDim2.new(0.01429, 0, -0.03077, 0);
+
+
+G2L["VText_8"] = INST("TextLabel", G2L["VAbility_4"]);
+G2L["VText_8"]["BorderSizePixel"] = 0;
+G2L["VText_8"]["TextSize"] = 60;
+G2L["VText_8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["VText_8"]["FontFace"] = Font.new([[rbxasset://fonts/families/RomanAntique.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["VText_8"]["TextColor3"] = Color3.fromRGB(74, 74, 74);
+G2L["VText_8"]["BackgroundTransparency"] = 1;
+G2L["VText_8"]["Size"] = UDim2.new(0, 84, 0, 92);
+G2L["VText_8"]["Text"] = [[V]];
+G2L["VText_8"]["Name"] = [[VText]];
+G2L["VText_8"]["Position"] = UDim2.new(0.04348, 0, 0, 0);
+
+
+G2L["VButton_9"] = INST("TextButton", G2L["VAbility_4"]);
+G2L["VButton_9"]["BorderSizePixel"] = 0;
+G2L["VButton_9"]["TextTransparency"] = 1;
+G2L["VButton_9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["VButton_9"]["BackgroundTransparency"] = 1;
+G2L["VButton_9"]["Size"] = UDim2.new(0, 80, 0, 74);
+G2L["VButton_9"]["Text"] = [[]];
+G2L["VButton_9"]["Name"] = [[VButton]];
+G2L["VButton_9"]["Position"] = UDim2.new(0.06522, 0, 0.09091, 0);
+
+
+G2L["T_a"] = INST("ImageLabel", G2L["Right_3"]);
+G2L["T_a"]["BorderSizePixel"] = 0;
+G2L["T_a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+-- G2L["T_a"]["ImageContent"] = ;
+G2L["T_a"]["ImageColor3"] = Color3.fromRGB(29, 29, 29);
+G2L["T_a"]["Image"] = [[rbxassetid://2312119891]];
+G2L["T_a"]["Size"] = UDim2.new(0, 96, 0, 88);
+G2L["T_a"]["BackgroundTransparency"] = 1;
+G2L["T_a"]["Name"] = [[T]];
+G2L["T_a"]["Position"] = UDim2.new(0, 746, 0, 126);
+
+
+G2L["do1_b"] = INST("ImageLabel", G2L["T_a"]);
+G2L["do1_b"]["BorderSizePixel"] = 0;
+G2L["do1_b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+-- G2L["do1_b"]["ImageContent"] = ;
+G2L["do1_b"]["ImageColor3"] = Color3.fromRGB(88, 88, 88);
+G2L["do1_b"]["Image"] = [[rbxassetid://2325939897]];
+G2L["do1_b"]["Size"] = UDim2.new(0, 160, 0, 122);
+G2L["do1_b"]["BackgroundTransparency"] = 1;
+G2L["do1_b"]["Name"] = [[do1]];
+G2L["do1_b"]["Position"] = UDim2.new(-0.35417, 0, -0.20455, 0);
+
+
+G2L["do2_c"] = INST("ImageLabel", G2L["do1_b"]);
+G2L["do2_c"]["BorderSizePixel"] = 0;
+G2L["do2_c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+-- G2L["do2_c"]["ImageContent"] = ;
+G2L["do2_c"]["Image"] = [[rbxassetid://2273224484]];
+G2L["do2_c"]["Size"] = UDim2.new(0, 140, 0, 130);
+G2L["do2_c"]["BackgroundTransparency"] = 1;
+G2L["do2_c"]["Name"] = [[do2]];
+G2L["do2_c"]["Position"] = UDim2.new(0.0625, 0, -0.01639, 0);
+
+
+G2L["do3_d"] = INST("ImageLabel", G2L["do2_c"]);
+G2L["do3_d"]["BorderSizePixel"] = 0;
+G2L["do3_d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+-- G2L["do3_d"]["ImageContent"] = ;
+G2L["do3_d"]["Image"] = [[rbxassetid://2092248396]];
+G2L["do3_d"]["Size"] = UDim2.new(0, 144, 0, 142);
+G2L["do3_d"]["BackgroundTransparency"] = 1;
+G2L["do3_d"]["Name"] = [[do3]];
+G2L["do3_d"]["Position"] = UDim2.new(0.01429, 0, -0.03077, 0);
+
+
+G2L["TText_e"] = INST("TextLabel", G2L["T_a"]);
+G2L["TText_e"]["BorderSizePixel"] = 0;
+G2L["TText_e"]["TextSize"] = 60;
+G2L["TText_e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["TText_e"]["FontFace"] = Font.new([[rbxasset://fonts/families/RomanAntique.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["TText_e"]["TextColor3"] = Color3.fromRGB(74, 74, 74);
+G2L["TText_e"]["BackgroundTransparency"] = 1;
+G2L["TText_e"]["Size"] = UDim2.new(0, 76, 0, 88);
+G2L["TText_e"]["Text"] = [[T]];
+G2L["TText_e"]["Name"] = [[TText]];
+G2L["TText_e"]["Position"] = UDim2.new(0.08333, 0, -0.02273, 0);
+
+
+G2L["TButton_f"] = INST("TextButton", G2L["T_a"]);
+G2L["TButton_f"]["BorderSizePixel"] = 0;
+G2L["TButton_f"]["TextTransparency"] = 1;
+G2L["TButton_f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["TButton_f"]["BackgroundTransparency"] = 1;
+G2L["TButton_f"]["Size"] = UDim2.new(0, 80, 0, 74);
+G2L["TButton_f"]["Text"] = [[]];
+G2L["TButton_f"]["Name"] = [[TButton]];
+G2L["TButton_f"]["Position"] = UDim2.new(0.10417, 0, 0.06818, 0); end)
+
+repeat task.wait() until G2L['VButton_9']
+
+local cooldowns = { lmb = true }
+
+G2L['VButton_9'].MouseButton1Click:Connect(function()
+if not cooldowns.lmb then return end
+
+local hitbox = INST'Part'
+hitbox.Size = Vector3.new(10,1,10)
+hitbox.Anchored = true
+hitbox.CanCollide = false
+hitbox.Transparency = .5
+hitbox.Material = Enum.Material.ForceField
+hitbox.Color = Color3.fromRGB(255, 0, 0)
+hitbox.Parent = WS
+
+local con
+con = game:service'RunService'.PreRender:Connect(function()
+hitbox.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.LookVector * 6
+
+for ez, code in next, game['Players']:GetPlayers() do
+if code ~= yourself and code.Character
+then local torso = code.Character:FindFirstChild'Torso'
+local hitboxrange = (hitbox.Position - torso.Position).Magnitude
+if hitboxrange <= 5.5 then
+local cd = code.Character:FindFirstChild'hitbox_cooldown'
+if not cd then
+cd = INST'BoolValue'
+cd.Name = 'hitbox_cooldown'
+cd.Value = false
+cd.Parent = code.Character end
+if cd.Value == false
+then cd.Value = true
+RepS.DiamondHit:FireServer(torso)
+task.delay(1.25, function()
+if cd and cd.Parent
+then cd.Value = false
+end end) end end end end end)
+
+task.delay(.5, function()
+local hitboxfade = game:service'TweenService':Create(hitbox, TweenInfo.new(2), {Transparency = 1})
+hitboxfade:Play()
+task.delay(.7, function()
+if con then con:Disconnect() end
+if hitbox and hitbox.Parent then hitbox:Destroy() end
+end) end)
+
+doanim('13544664658', .4, .2, .2, 2)
+docooldown('Enlighten!', .8, cooldowns, 'lmb')
+end) 
+
+G2L["ScreenGui_1"] = INST('ScreenGui', game.Players.LocalPlayer:FindFirstChild'PlayerGui');
+G2L["ScreenGui_1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["Desp VERSION_2"] = INST("TextLabel", G2L["ScreenGui_1"]);
+G2L["Desp VERSION_2"]["BorderSizePixel"] = 0;
+G2L["Desp VERSION_2"]["TextSize"] = 24;
+G2L["Desp VERSION_2"]["TextTransparency"] = .4;
+G2L["Desp VERSION_2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["Desp VERSION_2"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["Desp VERSION_2"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["Desp VERSION_2"]["BackgroundTransparency"] = 1;
+G2L["Desp VERSION_2"]["Size"] = UDim2.new(.247, 0, .16411, 0);
+G2L["Desp VERSION_2"]["Text"] = [[Despair, v0.1]];
+G2L["Desp VERSION_2"]["Name"] = [[Desp VERSION]];
+G2L["Desp VERSION_2"]["Position"] = UDim2.new(.16079, 0, -.16977, 0);
+G2L["UIAspectRatioConstraint_3"] = INST("UIAspectRatioConstraint", G2L["Desp VERSION_2"]);
+G2L["UIAspectRatioConstraint_3"]["AspectRatio"] = 3.65517;
