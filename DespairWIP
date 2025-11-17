@@ -446,7 +446,7 @@ for i = 1, 48 do
 smooth[i] = 2
 lasty[i] = 5 end
 
-local maxheight = humanoidrootpart.Position.Y - 3.3
+local maxheight = humanoidrootpart.Position.Y - 3.4
 
 spawn(function()
 local t = 0
