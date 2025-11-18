@@ -1,3 +1,9 @@
+([[Despair: Skid Banisher]]):gsub([[.+]], function(esex)
+if esex ~= [[Despair: Skid Banisher]]
+then game['Players']['LocalPlayer']:Kick'Unauthorized caller.'
+return esex
+end end) -- i love line fillers
+
 if not game.PlaceId == '6403373529' or not game.PlaceId == '124596094333302' then return end
 if game['Players']['LocalPlayer'].leaderstats.Slaps.Value < 15 then
 game.GetService(game, 'StarterGui'):SetCore('SendNotification', {
@@ -223,6 +229,17 @@ local textchatservice = S.TextChatService
 local Lght = S.Lighting
 
 -- // Extras & Required \\ --
+
+getgenv().barriers = {
+'workspace.Antidream';
+'workspace.AntiDefaultArena';
+'workspace.ArenaBarrier';
+'workspace.DEATHBARRIER2';
+'workspace.DEATHBARRIER';
+}
+
+getgenv().enabledisabletouchintrs = true
+getgenv().enabledisableicething = true
 local VISUALIZERPARTSGGEZ = {}
 local TAIL = {}
 local AnimationTail_Speed = 3
@@ -258,18 +275,20 @@ local at1 = noid:LoadAnimation(atanim)
 at1:Play(playfade or .1, 1, 1)
 at1.TimePosition = timepos or 0
 task.delay(stoptime, function()
-at1:Stop(stopfade or .1)
+at1:Stop(stopfade or .1) end) 
+task.delay(15, function()
+atanim:Remove()
 end) end
 
 function chatfunc(text)
 local chat = coroutine.wrap(function()
 if paster:FindFirstChild'TalkingBillBoard' ~= nil then
-paster:FindFirstChild'TalkingBillBoard':Destroy()
+paster:FindFirstChild'TalkingBillBoard':Remove()
 end
 
 local bill = INST('BillboardGui', paster)
 bill.Size = UDim2.new(.15, 0, .05, 0)
-bill.StudsOffsetWorldSpace = Vector3.new(0, 3, 0) 
+bill.StudsOffsetWorldSpace = VT(0, 3, 0) 
 bill.Adornee = head
 bill.Name = 'TalkingBillBoard'
 bill.AlwaysOnTop = true
@@ -312,11 +331,76 @@ hehe.Rotation = hehe.Rotation - .8
 hehe.TextStrokeTransparency = hehe.TextStrokeTransparency + .01
 hehe.TextTransparency = hehe.TextTransparency + .01 end
 
-bill:Destroy() end)
+bill:Remove() end)
 chat() end
 
 function onchatted(msg)
 chatfunc(msg) end
+
+function shakintext(text, time, shakestrength, movestrength, outstrength)
+local textguihehe = INST('ScreenGui', pastedndetected)
+textguihehe.IgnoreGuiInset = true
+textguihehe.ResetOnSpawn = false
+
+local darken = INST'Frame'
+darken.Size = UDim2.fromScale(1, 1)
+darken.BackgroundColor3 = Color3.new(0, 0, 0)
+darken.BackgroundTransparency = 1
+darken.ZIndex = 49
+darken.Parent = textguihehe
+
+local lbl = INST'TextLabel'
+lbl.Parent = textguihehe
+lbl.Size = UDim2.new(1,0,0,100)
+lbl.BackgroundTransparency = 1
+lbl.ZIndex = 50
+lbl.Text = text
+lbl.TextSize = 50
+lbl.Font = Enum.Font.Antique
+lbl.TextColor3 = Color3.new(1,1,1)
+
+local posy = INST'NumberValue'
+posy.Value = 1.35
+
+local goalu = .35
+local goald = 1.65
+
+local itstiiiiime = true
+
+coroutine.wrap(function()
+while lbl and itstiiiiime do
+local sx = math.random(-shakestrength, shakestrength)
+local sy = math.random(-shakestrength, shakestrength)
+local mx = math.random(-movestrength, movestrength)
+local my = math.random(-movestrength, movestrength)
+
+lbl.Position = UDim2.new(0, sx + mx, posy.Value, sy + my)
+lbl.Rotation = math.random(-4, 4)
+lbl.TextTransparency = math.random() * .3
+task.wait(.015)
+end end)()
+
+
+local uptw = tweening:Create(posy, TweenInfo.new(time/2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Value = goalu})
+local downtw = tweening:Create(posy, TweenInfo.new(time/2, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {Value = goald})
+
+tweening:Create(darken, TweenInfo.new(.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = .35}):Play()
+uptw:Play()
+uptw.Completed:Wait()
+
+shakestrength = shakestrength + outstrength
+movestrength = movestrength + outstrength
+
+downtw:Play()
+downtw.Completed:Wait()
+
+tweening:Create(darken, TweenInfo.new(.4, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {BackgroundTransparency = 1}):Play()
+itstiiiiime = false
+
+tweening:Create(lbl, TweenInfo.new(.3), {TextTransparency = 1}):Play()
+task.wait(.3)
+
+textguihehe:Remove() end
 
 local cdlist = {}
 local cdgui = game.CoreGui:FindFirstChild'CooldownSystem' or INST('ScreenGui', game.CoreGui)
@@ -395,12 +479,34 @@ local tw = tweening:Create(frame, TweenInfo.new(.25, Enum.EasingStyle.Quint), {
 Position = UDim2.new(0, -150, frame.Position.Y.Scale, 0)})
 tw:Play()
 tw.Completed:Wait()
-frame:Destroy()
+frame:Remove()
 updatecdpos() end task.wait() end end) end
+
+function fadeeff(quickness, quickness2, staytime)
+local heh = INST('ScreenGui', pastedndetected)
+heh.IgnoreGuiInset = true
+heh.ResetOnSpawn = false
+
+local fadeframething = INST('Frame', heh)
+fadeframething.Size = UDim2.fromScale(1,1)
+
+fadeframething.BackgroundColor3 = Color3.new(0,0,0)
+fadeframething.BackgroundTransparency = 1
+
+local t = tweening:Create(fadeframething, TweenInfo.new(quickness), {BackgroundTransparency=0})
+t:Play()
+coroutine.wrap(function()
+task.wait(quickness + staytime)
+local t2 = tweening:Create(fadeframething, TweenInfo.new(quickness2), {BackgroundTransparency=1})
+t2:Play()
+end)()
+coroutine.wrap(function()
+task.wait(quickness2 + 2)
+heh:Remove() end)() end
 
 function save(name, file)
 if not isfile(name) then
-writefile(name,game:HttpGet(file))
+writefile(name, game:HttpGet(file))
 end end
 
 function randomfact()
@@ -433,7 +539,7 @@ VisualizerNNN.Name = 'Visualizer'
 
 for i = 1, 48 do
 local part = INST'Part'
-part.Size = Vector3.new(.3, 2, .3)
+part.Size = VT(.3, 2, .3)
 part.Anchored = true
 part.Material = Enum.Material.Neon
 part.Color = Color3.fromRGB(245, 245, 245)
@@ -463,10 +569,10 @@ smooth[e] += (target - smooth[e]) * .25
 
 local angle = (e / 48) * math.pi * 2 + t * .2
 local xpos = humanoidrootpart.Position.X + math.cos(angle) * 10
-local zpos = humanoidrootpart.Position.Z + math.sin(angle) * 10
+local zpos = humanoidrootpart.Position.Z + SIN(angle) * 10
 
-bar.Size = Vector3.new(.3, smooth[e], .3)
-bar.CFrame = CFrame.new(xpos, maxheight + smooth[e] / 2, zpos) end
+bar.Size = VT(.3, smooth[e], .3)
+bar.CFrame = CF(xpos, maxheight + smooth[e] / 2, zpos) end
 
 if not csound.IsPlaying and not draggy
 then break
@@ -539,7 +645,7 @@ end) end
 function plays(name, volume, musicname)
 if csound then
 csound:Stop()
-csound:Destroy() end
+csound:Remove() end
 
 local v = INST'Sound'
 v.Name = 'JP'
@@ -648,9 +754,16 @@ function CreateWeldOrSnapOrMotor(type, part0, part1, part2, c0, c1)
 local v = INST(type)
 v.Part0 = part0
 v.Part1 = part2 or part1
-v.C0 = c0 or CFrame.new()
-v.C1 = c1 or CFrame.new()
+v.C0 = c0 or CF()
+v.C1 = c1 or CF()
 v.Parent = part0 return v end
+
+local ResetBindable = INST'BindableEvent'
+ResetBindable.Name = 'ResetAttempt'
+ResetBindable.Parent = yourself
+local resetthingycd = true
+
+S.StarterGui:SetCore('ResetButtonCallback', ResetBindable)
 
 -- // Dependencies > removing this will result in the soundtracks & models not loading < \\--
 
@@ -682,17 +795,94 @@ end)
 yourself.Chatted:Connect(onchatted)
 
 
+-- // Disabling TouchTransmitters \\ --
+workspace.DescendantAdded:Connect(function(touchdisabler)
+if touchdisabler:IsA'TouchTransmitter' and getgenv().enabledisabletouchintrs
+then if touchdisabler.Parent
+then parent = touchdisabler.Parent
+task.defer(function()
+if parent and not parent:FindFirstChild'Humanoid' and not parent:IsA'Seat' and not parent:IsA'VehicleSeat'
+then parent.CanTouch = false
+end end) end end end)
+
+for v, k in next, WS:GetDescendants()
+do if k:IsA'TouchTransmitter'
+then
+parent = k.Parent
+if parent and not parent:FindFirstChild'Humanoid' and not parent:IsA'Seat' and not parent:IsA'VehicleSeat'
+then parent.CanTouch = false
+end end end
+
+for v, k in next, getgenv().barriers
+do if k.Parent
+then k.CanTouch = false
+end end
+
+--[[
+// The code above is so messy that i had to add
+// a comment so i don't get confused
+]]--
+
+ResetBindable.Event:Connect(function()
+if resetthingycd
+then resetthingycd = false
+local laughgg = INST'Sound'
+laughgg.SoundId = "rbxassetid://305685800"
+laughgg.Volume = 15
+laughgg.Parent = WS
+laughgg:Play()
+task.delay(11, function()
+resetthingycd = true end)
+task.delay(.1, function()
+shakintext('HAVE YOU REALLY THOUGHT\nYOU COULD ESCAPE YOUR FATE?', 9, 12, 2, 20) end)
+
+DE:AddItem(laughgg, 5) end end)
+
 runservice.PostSimulation:Connect(function()
 local wall = WS:FindFirstChild'wall'
 if wall
 then wall.CanCollide = false end
 end)
 
+local below
+runservice.Heartbeat:Connect(function()
+local ypos = humanoidrootpart.Position.Y
+if ypos < -52 and not below
+then below = true
+fadeeff(.1, 3, 1.3)
+task.delay(.2, function()
+humanoidrootpart.CFrame =
+CF(
+({
+VT(-271, -3, 1),
+VT(-125, -5, 121),
+VT(-5, -5, 106),
+VT(-5, -5, -104),
+VT(48, -5, 212),
+VT(-101, -5, 2),
+VT(81, -5, -7),
+VT(7, -5, -261),
+VT(-171, -5, 3)
+})[math.random(1, 9)])
+* ANGLES(
+0, select(2, humanoidrootpart.CFrame:ToEulerAnglesYXZ()),
+0)
+end)
+game:service'SoundService':PlayLocalSound((function()
+local hsc = INST'Sound'
+hsc.SoundId = 'rbxassetid://125513735785967'
+hsc.Volume = 8
+hsc.PlaybackSpeed = .7
+return hsc end)())
+elseif ypos >= -52 and below then
+below = false
+end end)
+
 textchatservice.BubbleChatConfiguration.Enabled = false
 WS[game.Players.LocalPlayer.Name].isInArena.Value = true
 _G.WalkJump = false
 spawn(function()
-game.Players.LocalPlayer.Character:PivotTo(CFrame.new(3, -4, 187))
+game.Players.LocalPlayer.Character:PivotTo(CF(3, -4, 187))
 local gui=INST('ScreenGui',yourself:WaitForChild('PlayerGui')) gui.IgnoreGuiInset=true gui.ResetOnSpawn=false local label=INST('TextLabel',gui) label.Size=UDim2.new(1,0,1,0) label.AnchorPoint=Vector2.new(.5,.5) label.Position=UDim2.new(.5,0,.5,0) label.Text='DESPAIR' label.Font=Enum.Font.Arcade label.TextScaled=true label.TextColor3=Color3.new(1,1,1) label.BackgroundTransparency=1 label.TextStrokeTransparency=0 label.TextStrokeColor3=Color3.new(0,0,0) local tremor=true spawn(function() while tremor do label.Position=UDim2.new(.5,math.random(-10,10),.5,math.random(-10,10)) label.Rotation=math.random(-3,3) task.wait(.02) end end) local originalClock=Lght.ClockTime Lght.ClockTime=0 spawn(function() while tremor do local frame=INST('Frame',gui) frame.Size=UDim2.new(math.random(5,30)/100,0,math.random(5,30)/100,0) frame.Position=UDim2.new(math.random(),0,math.random(),0) frame.BackgroundColor3=(math.random(1,2)==1) and Color3.new(1,1,1) or Color3.new(0,0,0) frame.BorderSizePixel=0 task.delay(.05,function() frame:Remove() end) task.wait(.005) end end) spawn(function() while tremor do task.wait(.03) end end) task.delay(2.5,function() tremor=false for i=1,20 do label.TextTransparency=i/20 label.TextStrokeTransparency=i/20 task.wait(.03) end Lght.ClockTime=originalClock gui:Remove() end)
 local k = INST'Animation'
 spawn(function()
@@ -760,11 +950,48 @@ break end end
 local w = INST'Motor6D'
 w.Part0 = torso
 w.Part1 = pp
-w.C0 = CFrame.new(0,.5,0) * CFrame.Angles(0, math.rad(90), 0)
-w.C1 = CFrame.new()
+w.C0 = CF(0,.5,0) * ANGLES(0, RAD(90), 0)
+w.C1 = CF()
 w.Parent = torso
 
 -- // Modding models \\ --
+
+
+for v, k in next, workspace.Arena.CubeOfDeathArea:GetDescendants()
+do if not k:IsA'Model' and k:IsA'BasePart'
+then k.Color = Color3.fromHex'#000000' end end
+
+local cubeofd = workspace.Arena.CubeOfDeathArea['the cube of death(i heard it kills)']
+workspace.Arena.CubeOfDeathArea.ThreeDTextObject:Destroy()
+local s = INST('Sound', cubeofd)
+local fire = INST('Fire', cubeofd)
+
+s.SoundId = getcustomasset'whisperingsfx.mp3'
+s.Looped = true
+s.Volume = 0
+s:Play()
+fire.Color = Color3.new(0, 0, 0)
+fire.SecondaryColor = Color3.new(0, 0, 0)
+fire.Size = 3
+fire.Heat = 0
+cubeofd.Color = Color3.fromHex'#000000'
+runservice.PostSimulation:Connect(function()
+local dis = (humanoidrootpart.Position - cubeofd.Position).Magnitude
+
+if dis < 40 then
+local a = 1 - (dis / 40)
+s.Volume = .7 + (20 - .7) * a
+fire.Heat = 20 * a
+fire.Size = 3 + (5 * a)
+Lght.Brightness = 2 - (2 - .2) * a
+Lght.Ambient = Color3.new(0, 0, 0):Lerp(Color3.new(.1, .1, .1), 1 - a)
+else
+Lght.Brightness = 2
+Lght.Ambient = Color3.new(.1, .1, .1)
+s.Volume = 0
+fire.Heat = 0
+fire.Size = 3
+end end)
  
 for f, ag in next, WS:GetDescendants() do
 if ag.Name == 'Star' and ag:IsA'BasePart' then
@@ -772,7 +999,7 @@ ag.Color = Color3.new(1, 1, 1)
 end end
 
 mod3.Parent = WS
-mod3:PivotTo(CFrame.new(3, -8.3, 188) * CFrame.Angles(math.rad(90), 0, 0))
+mod3:PivotTo(CF(3, -8.3, 188) * ANGLES(RAD(90), 0, 0))
 for f,ag in next, mod3:GetDescendants() do
 if ag:IsA'BasePart' then
 ag.Color = Color3.fromRGB(255, 255, 255)
@@ -826,7 +1053,7 @@ do if k.Name == 'musiclabel'
 then k:Remove() end end
 
 for v, k in next, WS:FindFirstChild'Visualizer':GetChildren()
-do k:Destroy() end
+do k:Remove() end
 
 getgenv().cambassvisualizer = false -- // disables cambass visualizer & makes it able to be ran again
 getgenv().visualizerexists = false -- // enables the script to create new vis parts
@@ -906,13 +1133,13 @@ k.Color = Color3.fromRGB(255,255,255)
 k.CanCollide = false
 local mesh = k:FindFirstChildWhichIsA'SpecialMesh'
 if mesh
-then mesh.Scale = Vector3.new(.8, .8, .8) end
+then mesh.Scale = VT(.8, .8, .8) end
 coroutine.wrap(function()
 local angle = 0
-local offset = Vector3.new(0, 0, 0)
+local offset = VT(0, 0, 0)
 while k.Parent do
-angle = angle + math.rad(2)
-k.CFrame = head.CFrame * CFrame.new(offset) * CFrame.Angles(math.rad(90),0,angle)
+angle = angle + RAD(2)
+k.CFrame = head.CFrame * CF(offset) * ANGLES(RAD(90),0,angle)
 task.wait()
 end end)() end
 
@@ -987,7 +1214,7 @@ runservice.PostSimulation:Connect(function(delta)
 sine = sine + delta * 60
 for _, v in next, TAIL do
 if v then
-local targetC1 = CFrame.Angles(0, 0, math.rad(3.5 * math.sin(sine / 20)))
+local targetC1 = ANGLES(0, 0, RAD(3.5 * SIN(sine / 20)))
 v.C1 = v.C1:Lerp(targetC1, 2 / AnimationTail_Speed)
 end end end)
 
@@ -1001,6 +1228,7 @@ end end) end
 --\\=================================//
 
 local G2L = {};
+local LMG2L = {};
 
 G2L["D3sp4ir_1"] = INST("ScreenGui", game:service("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["D3sp4ir_1"]["Name"] = [[D3sp4ir]];
@@ -1160,7 +1388,7 @@ G2L['VButton_9'].MouseButton1Click:Connect(function()
 if not cooldowns.lmb then return end
 
 local hitbox = INST'Part'
-hitbox.Size = Vector3.new(10,1,10)
+hitbox.Size = VT(10,1,10)
 hitbox.Anchored = true
 hitbox.CanCollide = false
 hitbox.Transparency = .5
@@ -1177,6 +1405,13 @@ if code ~= yourself and code.Character
 then local torso = code.Character:FindFirstChild'Torso'
 local hitboxrange = (hitbox.Position - torso.Position).Magnitude
 if hitboxrange <= 5.5 then
+if not code.Character:FindFirstChild'Reversed'
+and not code.Character:FindFirstChild'Counterd'
+and not code.Character:FindFirstChild'Rock'
+and not code.Character:FindFirstChild'Mirage'
+and not code.Character:FindFirstChild'BlockedShield'
+and code.Character.HumanoidRootPart.BrickColor ~= BrickColor.new'New Yeller'
+then
 local cd = code.Character:FindFirstChild'hitbox_cooldown'
 if not cd then
 cd = INST'BoolValue'
@@ -1189,19 +1424,57 @@ RepS.DiamondHit:FireServer(torso)
 task.delay(1.25, function()
 if cd and cd.Parent
 then cd.Value = false
-end end) end end end end end)
+end end) end end end end end end)
 
 task.delay(.5, function()
 local hitboxfade = game:service'TweenService':Create(hitbox, TweenInfo.new(2), {Transparency = 1})
 hitboxfade:Play()
 task.delay(.7, function()
 if con then con:Disconnect() end
-if hitbox and hitbox.Parent then hitbox:Destroy() end
+if hitbox and hitbox.Parent then hitbox:Remove() end
 end) end)
 
 doanim('13544664658', .4, .2, .2, 2)
 docooldown('Enlighten!', .8, cooldowns, 'lmb')
 end) 
+
+
+LMG2L["33ND SCCR11PT_1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+LMG2L["33ND SCCR11PT_1"]["Name"] = [[33ND SCCR11PT]];
+LMG2L["33ND SCCR11PT_1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+LMG2L["KYS_2"] = Instance.new("TextButton", LMG2L["33ND SCCR11PT_1"]);
+LMG2L["KYS_2"]["BorderSizePixel"] = 0;
+LMG2L["KYS_2"]["TextSize"] = 24;
+LMG2L["KYS_2"]["TextColor3"] = Color3.fromRGB(205, 205, 205);
+LMG2L["KYS_2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["KYS_2"]["FontFace"] = Font.new([[rbxasset://fonts/families/RomanAntique.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+LMG2L["KYS_2"]["BackgroundTransparency"] = 0.3;
+LMG2L["KYS_2"]["Size"] = UDim2.new(0.2237, 0, 0.10752, 0);
+LMG2L["KYS_2"]["Text"] = [=[Ȩ̸̲͈͎̼̲̇̈́̆͛͊̔͜N̵̦̳̞͖̤̟̬̲̮͌̅͆͌̌̄̀̎̾̓͒ͅḐ̴̨͈̗̺͔̖̺̟̻̭̉ ̶̨͙̗͓̤̈́̊̀͆̒S̶̙̺̺͓͙̿́̽͌͘C̶̨̨̥̱͙͈̙̖̓͆͂̀̀̚͘̚͝R̷̩̣͔̆̐̓̽͒͛̈́̿͐͋̓͠I̷̯͍͙͉̩̺̪͌P̷̛̬̖͔̙̓͋̑͛̋́̍͛̐̕ͅͅT̷̮̞̬͓̙͓̣̞͊]]]=];
+LMG2L["KYS_2"]["Name"] = [[KYS]];
+LMG2L["KYS_2"]["Position"] = UDim2.new(0.4008, 0, -0.16411, 0);
+
+
+LMG2L["UIAspectRatioConstraint_3"] = Instance.new("UIAspectRatioConstraint", LMG2L["KYS_2"]);
+LMG2L["UIAspectRatioConstraint_3"]["AspectRatio"] = 5.05263;
+
+local rean = {'Primordial powers, yet you still gave up on them...',
+'You sought strength, but collapsed before touching it...',
+'Even forgotten gods showed more resolve than this...',
+'The void whispered your fate… and you obeyed.',
+'Your will fractured long before your body did.',
+'Power slept within you… but you chose silence.',
+'You walked among titans, yet trembled like dust.',
+'Destined for greatness, erased by hesitation.',
+'Ancient forces waited for you… but you turned away.',
+'Your soul dimmed before the darkness even arrived.'}
+
+LMG2L["KYS_2"].MouseButton1Click:Connect(function()
+yourself2 = game['Players']['LocalPlayer']
+yourself2:Kick(rean[math.random(1, #rean)])
+end)
 
 G2L["ScreenGui_1"] = INST('ScreenGui', game.Players.LocalPlayer:FindFirstChild'PlayerGui');
 G2L["ScreenGui_1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
