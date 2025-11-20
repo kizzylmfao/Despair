@@ -315,7 +315,7 @@ for i = 1, #text, 1 do
 task.wait()
 hehe.Text = string.sub(text,1,i) end
 
-task.wait(1.2)
+task.wait(1.5)
 
 local sound = INST('Sound', soundsparent)
 sound.SoundId = 'rbxassetid://749189256'
