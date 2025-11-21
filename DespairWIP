@@ -685,17 +685,17 @@ tweening:Create(indicator, TweenInfo.new(v.TimeLength, Enum.EasingStyle.Linear),
 
 v.Ended:Connect(function()
 if tracker == 'Drop The Game - Maxx Baer'
-then plays('Despair/On The 8Bit Vibe.mp3', 5, 'On The 8Bit Vibe')
+then plays('Despair/Soundtracks/On The 8Bit Vibe.mp3', 5, 'On The 8Bit Vibe')
 elseif tracker == 'On The 8Bit Vibe'
-then plays('Despair/私のドリトスを失うことはありませんか、私はあなたの赤ちゃんを失うことになります Vaporwave By vιrтυal dyѕтopιa.mp3', 4, '私のドリトスを失うことはありませんか、私はあなたの赤ちゃんを失うことになります')
+then plays('Despair/Soundtracks/私のドリトスを失うことはありませんか、私はあなたの赤ちゃんを失うことになります Vaporwave By vιrтυal dyѕтopιa.mp3', 4, '私のドリトスを失うことはありませんか、私はあなたの赤ちゃんを失うことになります')
 elseif tracker == '私のドリトスを失うことはありませんか、私はあなたの赤ちゃんを失うことになります'
-then plays('Despair/Attacking Vertical.mp3', 3, 'Attacking Vertical') 
+then plays('Despair/Soundtracks/Attacking Vertical.mp3', 3, 'Attacking Vertical') 
 elseif tracker == 'Attacking Vertical'
-then plays('Despair/Life Letters.mp3', 4, 'Life Letters')
+then plays('Despair/Soundtracks/Life Letters.mp3', 4, 'Life Letters')
 elseif tracker == 'Life Letters'
-then plays("Despair/Nero's First Day At Disneyland.mp3", 5, "Nero's First Day At Disneyland") 
+then plays("Despair/Soundtracks/Nero's First Day At Disneyland.mp3", 5, "Nero's First Day At Disneyland") 
 elseif tracker == "Nero's First Day At Disneyland"
-then plays('Despair/Drop The Game.mp3', 6, 'Drop The Game - Maxx Baer')
+then plays('Despair/Soundtracks/Drop The Game.mp3', 6, 'Drop The Game - Maxx Baer')
 end end) end
 
 function updatebar(posX)
@@ -770,18 +770,29 @@ S.StarterGui:SetCore('ResetButtonCallback', ResetBindable)
 if not isfolder'Despair' then
 makefolder'Despair' end
 
-save('Despair/On The 8Bit Vibe.mp3', 'https://github.com/kizzylmfao/mp3-ggez/raw/refs/heads/main/9048378262.mp3')
-save('Despair/Drop The Game.mp3', 'https://github.com/kizzylmfao/mp3-ggez/raw/refs/heads/main/Flume%20&%20Chet%20Faker%20-%20Drop%20The%20Game%20(Maxx%20Baer%20Re-think).mp3')
-save("Despair/Nero's First Day At Disneyland.mp3", "https://github.com/kizzylmfao/mp3-ggez/raw/refs/heads/main/Nero's%20Day%20at%20Disneyland%20-%20Human%20Artifacts%20Found%20Underwater,%20Best%20Dressed%20Lists.mp3")
-save('Despair/Life Letters.mp3', 'https://github.com/kizzylmfao/mp3-ggez/raw/refs/heads/main/Life%20Letters%20(1).mp3')
-save('Despair/Attacking Vertical.mp3', 'https://github.com/kizzylmfao/mp3-ggez/raw/refs/heads/main/Femtanyl%20%20-%20ATTACKING%20VERTICAL%20lyric%20video.mp3')
-save('Despair/私のドリトスを失うことはありませんか、私はあなたの赤ちゃんを失うことになります Vaporwave By vιrтυal dyѕтopιa.mp3', 'https://github.com/kizzylmfao/mp3-ggez/raw/refs/heads/main/%E7%A7%81%E3%81%AE%E3%83%89%E3%83%AA%E3%83%88%E3%82%B9%E3%82%92%E5%A4%B1%E3%81%86%E3%81%93%E3%81%A8%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%9B%E3%82%93%E3%81%8B%E3%80%81%E7%A7%81%E3%81%AF%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%E8%B5%A4%E3%81%A1%E3%82%83%E3%82%93%E3%82%92%E5%A4%B1%E3%81%86%E3%81%93%E3%81%A8%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%99%20Vaporwave%20%20By%20v%CE%B9r%D1%82%CF%85al%20dy%D1%95%D1%82op%CE%B9a.mp3')
-save('Despair/star.txt.rbxmx', 'https://github.com/kizzylmfao/files/raw/refs/heads/main/star.txt.rbxmx')
-save('Despair/spikecrown.txt.rbxmx', 'https://github.com/kizzylmfao/files/raw/refs/heads/main/spikecrown.txt.rbxmx')
-save('Despair/Light.mp3', 'https://github.com/kizzylmfao/mp3-ggez/raw/refs/heads/main/lv_0_20250921172246-slowedandreverbstudio.wav')
+if not isfolder'Despair/Soundtracks' then
+makefolder'Despair/Soundtracks' end
+
+if not isfolder'Despair/Models' then
+makefolder'Despair/Models' end
+
+if not isfolder'Despair/Voicelines' then
+makefolder'Despair/Voicelines' end
+
+save('Despair/Soundtracks/On The 8Bit Vibe.mp3', 'https://github.com/kizzylmfao/mp3-ggez/raw/refs/heads/main/9048378262.mp3')
+save('Despair/Soundtracks/Drop The Game.mp3', 'https://github.com/kizzylmfao/mp3-ggez/raw/refs/heads/main/Flume%20&%20Chet%20Faker%20-%20Drop%20The%20Game%20(Maxx%20Baer%20Re-think).mp3')
+save("Despair/Soundtracks/Nero's First Day At Disneyland.mp3", "https://github.com/kizzylmfao/mp3-ggez/raw/refs/heads/main/Nero's%20Day%20at%20Disneyland%20-%20Human%20Artifacts%20Found%20Underwater,%20Best%20Dressed%20Lists.mp3")
+save('Despair/Soundtracks/Life Letters.mp3', 'https://github.com/kizzylmfao/mp3-ggez/raw/refs/heads/main/Life%20Letters%20(1).mp3')
+save('Despair/Soundtracks/Attacking Vertical.mp3', 'https://github.com/kizzylmfao/mp3-ggez/raw/refs/heads/main/Femtanyl%20%20-%20ATTACKING%20VERTICAL%20lyric%20video.mp3')
+save('Despair/Soundtracks/私のドリトスを失うことはありませんか、私はあなたの赤ちゃんを失うことになります Vaporwave By vιrтυal dyѕтopιa.mp3', 'https://github.com/kizzylmfao/mp3-ggez/raw/refs/heads/main/%E7%A7%81%E3%81%AE%E3%83%89%E3%83%AA%E3%83%88%E3%82%B9%E3%82%92%E5%A4%B1%E3%81%86%E3%81%93%E3%81%A8%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%9B%E3%82%93%E3%81%8B%E3%80%81%E7%A7%81%E3%81%AF%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AE%E8%B5%A4%E3%81%A1%E3%82%83%E3%82%93%E3%82%92%E5%A4%B1%E3%81%86%E3%81%93%E3%81%A8%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%99%20Vaporwave%20%20By%20v%CE%B9r%D1%82%CF%85al%20dy%D1%95%D1%82op%CE%B9a.mp3')
+save('Despair/Voicelines/Light.mp3', 'https://github.com/kizzylmfao/mp3-ggez/raw/refs/heads/main/lv_0_20250921172246-slowedandreverbstudio.wav')
+save('Despair/Voicelines/mercy.mp3', 'https://github.com/kizzylmfao/mp3-ggez/raw/refs/heads/main/93478915286388.ogg')
+save('Despair/Voicelines/whisperingsfx.mp3', 'https://github.com/kizzylmfao/mp3-ggez/raw/refs/heads/main/whisperingsfx.mp3')
+save('Despair/Models/star.txt.rbxmx', 'https://github.com/kizzylmfao/files/raw/refs/heads/main/star.txt.rbxmx')
+save('Despair/Models/spikecrown.txt.rbxmx', 'https://github.com/kizzylmfao/files/raw/refs/heads/main/spikecrown.txt.rbxmx')
 --==--
 local pp
-local mod1 = game:GetObjects(getcustomasset'star.txt.rbxmx')
+local mod1 = game:GetObjects(getcustomasset'Despair/Models/star.txt.rbxmx')
 local mod2 = mod1[1]
 local mod3 = game:GetObjects'rbxassetid://10383669937'[1]
 
@@ -870,9 +881,9 @@ VT(-171, -5, 3)
 end)
 game:service'SoundService':PlayLocalSound((function()
 local hsc = INST'Sound'
-hsc.SoundId = 'rbxassetid://125513735785967'
-hsc.Volume = 8
-hsc.PlaybackSpeed = .7
+hsc.SoundId = getcustomasset'Despair/Voicelines/mercy.mp3'
+hsc.Volume = 6
+hsc.PlaybackSpeed = 1
 return hsc end)())
 elseif ypos >= -52 and below then
 below = false
@@ -900,7 +911,7 @@ local v = noid:LoadAnimation(k)
 v:Play()
 spawn(function()
 local se2 = INST'Sound'
-se2.SoundId = getcustomasset'Light.mp3'
+se2.SoundId = getcustomasset'Despair/Voicelines/Light.mp3'
 se2.Volume = 2.5
 se2.Parent = game.CoreGui
 se2:Play()
@@ -935,7 +946,7 @@ end) end) end)
 
 --++--
 task.delay(3, function()
-plays('Despair/Drop The Game.mp3', 6, 'Drop The Game - Maxx Baer') end)
+plays('Despair/Soundtracks/Drop The Game.mp3', 6, 'Drop The Game - Maxx Baer') end)
 
 --++--
 mod2.Parent = WS
@@ -966,7 +977,7 @@ workspace.Arena.CubeOfDeathArea.ThreeDTextObject:Destroy()
 local s = INST('Sound', cubeofd)
 local fire = INST('Fire', cubeofd)
 
-s.SoundId = getcustomasset'whisperingsfx.mp3'
+s.SoundId = getcustomasset'Despair/Voicelines/whisperingsfx.mp3'
 s.Looped = true
 s.Volume = 0
 s:Play()
@@ -1125,7 +1136,7 @@ end end end) end) end
 
 -- // Models Creation \\ --
 
-local k = game:GetObjects(getcustomasset'Despair/spikecrown.txt.rbxmx')[1]
+local k = game:GetObjects(getcustomasset'Despair/Models/spikecrown.txt.rbxmx')[1]
 k.Parent = workspace
 
 if k:IsA'BasePart' then
